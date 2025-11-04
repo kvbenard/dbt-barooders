@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: barooders
+    tables:
+      - name: order
+      - name: order_line
+      - name: products
+
+models:
+  - name: stg_barooders__order
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: currency
+        tests:
+          - unique
+          - not_null
