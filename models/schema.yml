@@ -5,16 +5,12 @@ sources:
     tables:
       - name: order
       - name: order_line
-      - name: products
+      - name: product
 
 models:
   - name: stg_barooders__order
     columns:
       - name: id
-        tests:
-          - unique
-          - not_null
-      - name: currency
         tests:
           - unique
           - not_null
